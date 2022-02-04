@@ -39,7 +39,7 @@ spec:
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
-                name: dgca-issuance-service-web
+                name: dgca-issuance-web
           ports:
             - name: http
               containerPort: 8080
