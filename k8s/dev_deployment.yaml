@@ -9,7 +9,7 @@ spec:
   ports:
     - name: http
       port: 80
-      targetPort: 8080
+      targetPort: 80
   selector:
     app: issuance-service-web
   type: LoadBalancer
@@ -42,11 +42,11 @@ spec:
                 name: dgca-issuance-web
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 80
             - name: https
               containerPort: 443
           readinessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 80
 
